@@ -57,10 +57,7 @@ export default {
 
 <style lang="scss">
 @import "../assets/sass/app.scss";
-  .logo{
-    height: 5rem;
-    width: auto;
-  }
+
   .header-wrapper{
     display: flex;
     justify-content: center;
@@ -68,14 +65,33 @@ export default {
     padding:1rem 0;
   }
   .header-content{
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint(phablet){
+      width: 100%;
+      padding:0 1rem;
+    }
+
+    .logo{
+      height: 5rem;
+      width: auto;
+
+      @include breakpoint(phablet){
+
+      }
+    }
+
   }
   .icons{
     display: flex;
     align-items: center;
+
+    @include breakpoint(phablet){
+      display: none;
+    }
   }
   .icons-wrapper{
     display: flex;

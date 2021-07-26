@@ -85,7 +85,7 @@
 	padding-right:1rem;
 	//width:100%;
 	background-color: $light-gray;
-	border: 1px solid $gray;
+	border: 1px solid darken($light-gray, 10);
 	margin-bottom: 1rem;
 }
 

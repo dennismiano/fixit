@@ -22,6 +22,8 @@
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/sass/app.scss";
+
   .partners{
     display: flex;
     flex-flow: column;
@@ -33,5 +35,16 @@
     padding-top: 2rem;
     display: flex;
     justify-content: space-around;
+
+      .logo{
+
+        @include breakpoint(phablet){
+          display: none;
+
+          &:first-child{
+            display: block;
+          }
+        }
+      }
   }
 </style>

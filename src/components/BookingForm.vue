@@ -40,6 +40,10 @@
     }
     input{
       @include form-inputs;
+
+      &::placeholder{
+        color:darken($light-gray, 20);
+      }
     }
 
       select{
@@ -48,10 +52,12 @@
       padding-left: 1rem;
       padding-right: 1rem;
       background-color: $light-gray;
+      border: 1px solid darken($light-gray, 10);
 
-      &::placeholder{
-        color:#c3c3c3;
+      option{
+        color:darken($light-gray, 20);
       }
+
     }
 
     button{

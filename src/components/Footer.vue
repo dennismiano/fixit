@@ -36,6 +36,8 @@
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/sass/app.scss";
+
   .footer{
     background-image: url('../assets/footer-bg.svg');
     background-size: cover;
@@ -43,6 +45,10 @@
     display: flex;
     justify-content: center;
     padding:10rem 2rem;
+
+    @include breakpoint(phablet){
+      padding:3rem 2rem;
+    }
 
     h2{
       font-weight: 600;
@@ -56,9 +62,20 @@
     display: flex;
     width:80%;
 
+    @include breakpoint(phablet){
+      width:100%;
+      flex-flow: column;
+    }
+
     .column{
       width:23.5%;
       margin-right: 2%;
+
+      @include breakpoint(phablet){
+        width:100%;
+        margin-right: 0;
+        margin-top:1rem;
+      }
 
       &:last-child{
         margin-right: 0;
