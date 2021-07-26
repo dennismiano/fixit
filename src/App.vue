@@ -55,13 +55,17 @@ export default {
     font-family: 'Montserrat', sans-serif;
     margin:0;
   }
+
+  //UTILITY CLASSES
   h1,h2,h3,h4,h5,h6,p,a, ::placeholder{
     margin:0;
     font-family: 'Montserrat', sans-serif;
   }
-  p, li{
+  p, li, a{
     font-size: 0.8rem;
   }
+
+
 
   .value-proposition{
     display: flex;

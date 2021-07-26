@@ -3,6 +3,7 @@
       <div class="hero-content">
           <div class="hero-image">
               <img alt="Vue logo" src="../assets/repairman.png">
+              <h2>Get it fixed<br><span class="yellow">Today!</span></h2>
           </div>
 
           <div class="booking-form-wrapper">
@@ -25,6 +26,10 @@
 
 <style lang="scss" scoped>
 @import "../assets/sass/app.scss";
+
+  .yellow{
+    color:$primary-color;
+  }
 
   .hero-wrapper{
     background-image: url('../assets/hero-bg.jpg');
@@ -57,6 +62,7 @@
         height: 150px;
         justify-content: flex-start;
         align-items: flex-start;
+        position: relative;
       }
 
       img{
@@ -67,6 +73,21 @@
           height: 150%;
         }
       }
+
+      h2{
+        display: none;
+
+        @include breakpoint(phablet){
+          display: block;
+          top: 50px;
+          right: 0;
+          text-align: right;
+          position: absolute;
+        }
+
+      }
+
+
     }
     .booking-form-wrapper{
       width:50%;
@@ -75,6 +96,8 @@
 
       @include breakpoint(phablet){
         width:100%;
+        position: relative;
+        z-index: 99;
       }
     }
   }
